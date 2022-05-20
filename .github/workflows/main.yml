@@ -22,7 +22,16 @@ jobs:
         run: echo hello from task1
       - name: task2
         run: |
-          build.bat
+          cmd /c build.bat
+      - name: setup artifact
+        run: |
+          mkdir bin
+          copy /B hello.exe bin/
+      - name: upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: WindowsBinaries
+          path: ./bin/
           
 #  macos-test:
 #    runs-on: macos-latest
