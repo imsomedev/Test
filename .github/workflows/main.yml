@@ -3,34 +3,34 @@ name: CI
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  ubuntu-test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: task1
-        run: echo hello from task1!
-      - name: task2 Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+#  ubuntu-test:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v3
+#      - name: task1
+#        run: echo hello from task1!
+#      - name: task2 Run a multi-line script
+#        run: |
+#          echo Add other actions to build,
+#          echo test, and deploy your project.
           
   windows-test:
     runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v2      
-      - name: task1.
-        run: echo hello from task1
-      - name: task2
-        run: |
-          cl.exe hello.c
-          
-  macos-test:
-    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
       - name: task1.
         run: echo hello from task1
       - name: task2
         run: |
-          echo hello from task 2
-          echo hello from task 2 2
+          build.bat
+          
+#  macos-test:
+#    runs-on: macos-latest
+#    steps:
+#      - uses: actions/checkout@v2
+#      - name: task1.
+#        run: echo hello from task1
+#      - name: task2
+#        run: |
+#          echo hello from task 2
+#          echo hello from task 2 2
