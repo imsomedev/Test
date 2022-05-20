@@ -22,8 +22,7 @@ jobs:
         run: echo hello from task1
       - name: task2
         run: |
-          echo hello from task 2
-          echo hello from task 2 2
+          cl.exe hello.c
           
   macos-test:
     runs-on: macos-latest
